@@ -27,6 +27,7 @@ namespace ConsoleApp
 			if (!new Validator().IsPositiveInt(referatCount))
 			{
 				Console.WriteLine("Необходимо вводить только положительные числа!");
+				Console.ReadKey();
 				return;
 			}
 
