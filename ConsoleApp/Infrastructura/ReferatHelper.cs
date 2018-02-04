@@ -37,7 +37,10 @@ namespace ConsoleApp.Infrastructura
 			Task.WaitAll(taskList.ToArray());
 
 			foreach (var task in taskList)
-				bag.Add(task.Result);
+			{
+				if (task.Result != null)
+					bag.Add(task.Result);
+			}
 
 			return bag.ToList();
 		}
